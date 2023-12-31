@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body><center>
+  <H1> 
+  Todo List</h1>
+  <input id="input">
+  <button onclick=add()>Add</button>
+  <ul id="ul1">
+    <li>Hello<button onclick="delte(event)">Delete</button></li>
+    </ul>
+</center>
+<script>
+var input=document.getElementById("input")
+var list=document.getElementById("ul1")
+ function add(){
+   var a=document.createElement("li")
+   a.innerHTML=input.value +"<button onclick='delte(event)'>Delete</button>"
+   list.append(a)
+ }
+ function delte(event){
+   event.target.parentElement.remove()
+ }
+</script>
+<style>
+  li{
+    display:block;
+  }
+  h1:hover{
+    color: lightpink;
+  }
+  body:hover{
+    color:white;background-color:black;
+  }
+</style>
+</body>
+
+</html>
